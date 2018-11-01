@@ -73,17 +73,17 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    vendor: ['axios', 'vuetify']
-    // extend(config, ctx) {
-    // Run ESLint on save
-    // if (ctx.isDev && ctx.isClient) {
-    //   config.module.rules.push({
-    //     enforce: 'pre',
-    //     test: /\.(js|vue)$/,
-    //     loader: 'eslint-loader',
-    //     exclude: /(node_modules)/
-    //   })
-    // }
-    // }
+	vendor: ['axios', 'vuetify'],
+	extend(config, { isDev }) {
+		// Run ESLint on save
+		if (isDev && process.client) {
+		  config.module.rules.push({
+			enforce: 'pre',
+			test: /\.(js|vue)$/,
+			loader: 'eslint-loader',
+			exclude: /(node_modules)/
+		  })
+		}
+	  }
   }
 };

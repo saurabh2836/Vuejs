@@ -8,7 +8,7 @@
     <v-btn to="/" icon>
       <v-icon>refresh</v-icon>
     </v-btn>
-  </v-toolbar>
+  </v-toolbar> 
 </template>
 <script>
 </script>
