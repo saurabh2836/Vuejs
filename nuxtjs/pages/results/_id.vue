@@ -2,7 +2,7 @@
 	<div>
 		<h1>Result for {{$route.params.id}}</h1>
 		<div v-if="albumExists">
-			<div v-for="(album,index) in albumData" >
+			<div v-for="(album,index) in albumData " :key="index">
 				<Card 
 					:title="album.collectionCensoredName"
 					:image="album.artworkUrl100"
